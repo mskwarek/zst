@@ -1,0 +1,9 @@
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\bin\Debug\ZST.exe.config
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\bin\Debug\ZST.exe
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\bin\Debug\ZST.pdb
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\obj\Debug\ZST.csprojResolveAssemblyReference.cache
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\obj\Debug\ZST.Form1.resources
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\obj\Debug\ZST.Properties.Resources.resources
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\obj\Debug\ZST.csproj.GenerateResource.Cache
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\obj\Debug\ZST.exe
+d:\rawks\dokumenty\visual studio 2013\Projects\ZST\ZST\obj\Debug\ZST.pdb

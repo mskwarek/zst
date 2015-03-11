@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<daty>
+<Date ID = "2014-01-01 15:00:01" Source = "client 1" LogMessage = "first message" />
+<Date ID = "2014-02-01 15:00:02" Source = "client 2" LogMessage = "2nd message" />
+<Date ID = "2014-03-01 15:00:03" Source = "client 3" LogMessage = "3rd message" />
+<Date ID = "2014-04-01 15:00:04" Source = "client 4" LogMessage = "4th message" />
+<Date ID = "2014-05-01 15:00:05" Source = "client 5" LogMessage = "5th message" />
+<Date ID = "2014-06-01 15:00:06" Source = "client 6" LogMessage = "6th message" />
+<Date ID = "2014-07-01 15:00:07" Source = "client 7" LogMessage = "7th message" />
+</daty>
