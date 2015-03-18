@@ -9,3 +9,8 @@ d:\rawks\dokumenty\visual studio 2013\Projects\Client\WindowsFormsApplication3\o
 D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
 D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Client\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache

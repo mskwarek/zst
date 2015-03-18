@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace WindowsFormsApplication3
 {
@@ -15,17 +16,42 @@ namespace WindowsFormsApplication3
         private TcpClient client;
         private NetworkStream stream;
         private Thread clientThread;
-
+        private List<String> conf;
 
         public Client()
         {
             this.encoder = new ASCIIEncoding();
+            conf = readConfig();
+
+        }
+
+        private List<String> readConfig()
+        {
+            XmlDocument xml = new XmlDocument();
+
+            var filePath = System.Reflection.Assembly.GetExecutingAssembly().Location + "\\..\\..\\..\\Resources\\Config.xml";
+            Console.WriteLine(filePath);
+            xml.Load(filePath);
+
+            List<String> list = new List<String>();
+
+            foreach (XmlNode xnode in xml.SelectNodes("//Config[@serverPort]"))
+            {
+                string serverPort = xnode.Attributes[0].Value;
+                list.Add(serverPort);
+                string serverIP = xnode.Attributes[1].Value;
+                list.Add(serverIP);
+            }
+
+            return list;
 
         }
 
 
-        public bool connect(string ip, string port)
+        public bool connect()
         {
+            string ip = conf[1];
+            string port = conf[0];
 
             client = new TcpClient();
             IPAddress ipAddress;

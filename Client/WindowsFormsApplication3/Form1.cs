@@ -27,7 +27,7 @@ namespace WindowsFormsApplication3
 
         private void connectButton_Click(object sender, EventArgs e)
         {
-            client.connect("localhost", "3333");
+            client.connect();
         }
 
         private void sendMsgButton_Click(object sender, EventArgs e)

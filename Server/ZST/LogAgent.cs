@@ -32,11 +32,34 @@ namespace ZST
         public LogAgent(ListView logs)
         {
             this.logListView = logs;
-            
 
+            List<String> config = new List<String>();
+            config = readConfig();
             server = new Server();
             server.OnNewLogRecived += new Server.LogMsgHandler(updateList);
-            server.startServer("3333");
+            server.startServer(config[0]);
+
+        }
+
+        private List<String> readConfig()
+        {
+            XmlDocument xml = new XmlDocument();
+            
+            var filePath = System.Reflection.Assembly.GetExecutingAssembly().Location + "\\..\\..\\..\\Resources\\Config.xml";
+            Console.WriteLine(filePath);
+            xml.Load(filePath);
+
+            List<String> list = new List<String>();
+
+            foreach (XmlNode xnode in xml.SelectNodes("//Config[@serverPort]"))
+            {
+                string serverPort = xnode.Attributes[0].Value;
+                list.Add(serverPort);
+                string serverIP= xnode.Attributes[1].Value;
+                list.Add(serverIP);
+            }
+
+            return list;
 
         }
 
@@ -109,7 +132,7 @@ namespace ZST
             logs.Add(new Log(msg));
         }
 
-        public void saveLogsToFile()
+        public void saveLogsToFile(string path)
         {
             XmlTextWriter writer = new XmlTextWriter(path, System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);

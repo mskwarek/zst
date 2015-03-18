@@ -13,13 +13,13 @@ namespace ZST
 {
     public partial class Form1 : Form
     {
-        private LogAgent conf;
+        private LogAgent logAgent;
         
 
         public Form1()
         {
             InitializeComponent();
-            conf = new LogAgent(this.logListView);
+            logAgent = new LogAgent(this.logListView);
             
         }
 
@@ -31,7 +31,7 @@ namespace ZST
 
         private void openFileDialog_FileOk(object sender, CancelEventArgs e)
         {
-            conf.loadLogs(openFileDialog.FileName);
+            logAgent.loadLogs(openFileDialog.FileName);
             //enableButtonAfterConfiguration();
             //electionAuthority = new ElectionAuthority(this.logs, this.configuration, this);
         }
@@ -44,14 +44,16 @@ namespace ZST
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            conf.Path = openFileDialog.FileName;
-            this.conf.saveLogsToFile();
+            //logAgent.Path = openFileDialog.FileName;
+            
+            this.logAgent.saveLogsToFile(openFileDialog1.FileName);
+            Console.WriteLine(openFileDialog1.FileName);
             MessageBox.Show("XML File created ! ");
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            conf.clearList(logListView);
+            logAgent.clearList(logListView);
             logListView.Items.Clear();
         }
     }
