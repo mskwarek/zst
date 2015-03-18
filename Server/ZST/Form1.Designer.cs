@@ -116,6 +116,7 @@
             this.ClearButton.Text = "Clear Logs";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+
             // 
             // Form1
             // 

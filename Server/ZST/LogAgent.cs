@@ -163,5 +163,10 @@ namespace ZST
             logs = new List<Log>();
             list = new ListView();
         }
+
+        public void stopServer()
+        {
+            server.stopServer();
+        }
     }
 }

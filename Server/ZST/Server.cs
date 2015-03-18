@@ -15,6 +15,7 @@ namespace ZST
         private Thread serverThread;
         private Dictionary<TcpClient, string> clientSockets;
         private ASCIIEncoding encoder;
+        private bool running = false;
 
         public delegate void LogMsgHandler(object myObject, LogArgs myArgs);
         public event LogMsgHandler OnNewLogRecived;
@@ -31,6 +32,7 @@ namespace ZST
             if (serverSocket == null && serverThread == null)
             {
                 this.serverSocket = new TcpListener(IPAddress.Any, runningPort);
+                running = true;
                 this.serverThread = new Thread(new ThreadStart(ListenForClients));
                 this.serverThread.Start();
                 return true;
@@ -40,6 +42,11 @@ namespace ZST
             {
                 return false;
             }
+        }
+
+        public void stopServer()
+        {
+            running = false;
         }
 
         private void ListenForClients()
