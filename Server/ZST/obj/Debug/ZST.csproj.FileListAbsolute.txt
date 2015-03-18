@@ -13,3 +13,11 @@ D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\ZST\bin\Debug\ObjectListView.
 D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\bin\Debug\ZST.exe.config
 D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\obj\Debug\ZST.exe
 D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\obj\Debug\ZST.pdb
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\obj\Debug\ZST.csprojResolveAssemblyReference.cache
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\obj\Debug\ZST.Form1.resources
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\obj\Debug\ZST.Properties.Resources.resources
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\obj\Debug\ZST.csproj.GenerateResource.Cache
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\bin\Debug\ZST.exe
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\bin\Debug\ZST.pdb
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\bin\Debug\ObjectListView.pdb
+D:\rawks\Dokumenty\Visual Studio 2013\Projects\ZST\Server\ZST\bin\Debug\ObjectListView.xml

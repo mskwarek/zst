@@ -16,6 +16,9 @@ namespace ZST
         private Dictionary<TcpClient, string> clientSockets;
         private ASCIIEncoding encoder;
 
+        public delegate void LogMsgHandler(object myObject, LogArgs myArgs);
+        public event LogMsgHandler OnNewLogRecived;
+
         public Server()
         {
             clientSockets = new Dictionary<TcpClient, string>();
@@ -95,7 +98,12 @@ namespace ZST
                 else
                 {
                     string[] elem = signal.Split('&');
-                    LogAgent.addLog(elem);
+                    //LogAgent.addLog(elem);
+
+
+                    LogArgs myArgs = new LogArgs(elem);
+                    OnNewLogRecived(this, myArgs);
+
 
                 }
             }

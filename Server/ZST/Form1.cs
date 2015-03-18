@@ -14,14 +14,13 @@ namespace ZST
     public partial class Form1 : Form
     {
         private LogAgent conf;
-        private Server server;
+        
 
         public Form1()
         {
             InitializeComponent();
             conf = new LogAgent(this.logListView);
-            server = new Server();
-            server.startServer("3333");
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +38,21 @@ namespace ZST
 
         private void button2_Click(object sender, EventArgs e)
         {
+            openFileDialog1.ShowDialog();
+            
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            conf.Path = openFileDialog.FileName;
             this.conf.saveLogsToFile();
+            MessageBox.Show("XML File created ! ");
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            conf.clearList(logListView);
+            logListView.Items.Clear();
         }
     }
 }
