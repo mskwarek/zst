@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Diagnostics;
+using BrightIdeasSoftware;
 
 namespace ZST
 {
     public partial class Form1 : Form
     {
         private LogAgent logAgent;
+        private List<int> selected;
         
 
         public Form1()
         {
             InitializeComponent();
-            logAgent = new LogAgent(this.logListView);
+            selected = new List<int>();
+            logAgent = new LogAgent(this.objectListView1);
             
         }
 
@@ -54,8 +57,7 @@ namespace ZST
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            logAgent.clearList(logListView);
-            logListView.Items.Clear();
+
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -75,6 +77,23 @@ namespace ZST
                     Process.GetCurrentProcess().Kill();
                     break;
             }
+        }
+
+        private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            selected.Clear();
+            foreach (Object selectedObj in this.objectListView1.SelectedObjects)
+            {
+                selected.Add(this.objectListView1.IndexOf(selectedObj));
+            }
+            this.logAgent.removeLogs(selected);
+            this.objectListView1.RemoveObjects(this.objectListView1.SelectedObjects);
+            
         }  
     }
 }

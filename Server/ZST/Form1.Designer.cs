@@ -1,4 +1,6 @@
-﻿namespace ZST
+﻿using BrightIdeasSoftware;
+using System;
+namespace ZST
 {
     partial class Form1
     {
@@ -29,55 +31,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logListView = new System.Windows.Forms.ListView();
-            this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.source = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.logMessage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.ClearButton = new System.Windows.Forms.Button();
+            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.dt = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.tm = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.src = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.msg = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logListView
-            // 
-            this.logListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.date,
-            this.time,
-            this.source,
-            this.logMessage});
-            this.logListView.Location = new System.Drawing.Point(12, 12);
-            this.logListView.Name = "logListView";
-            this.logListView.Size = new System.Drawing.Size(719, 414);
-            this.logListView.TabIndex = 1;
-            this.logListView.UseCompatibleStateImageBehavior = false;
-            this.logListView.View = System.Windows.Forms.View.Details;
-            // 
-            // date
-            // 
-            this.date.Text = "Date";
-            this.date.Width = 104;
-            // 
-            // time
-            // 
-            this.time.Text = "Time";
-            this.time.Width = 98;
-            // 
-            // source
-            // 
-            this.source.Text = "Source";
-            this.source.Width = 134;
-            // 
-            // logMessage
-            // 
-            this.logMessage.Text = "Log Message";
-            this.logMessage.Width = 326;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(740, 12);
+            this.button1.Location = new System.Drawing.Point(12, 390);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 36);
             this.button1.TabIndex = 2;
@@ -93,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(740, 54);
+            this.button2.Location = new System.Drawing.Point(171, 390);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 36);
             this.button2.TabIndex = 3;
@@ -107,44 +76,94 @@
             this.openFileDialog1.SupportMultiDottedExtensions = true;
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // ClearButton
+            // objectListView1
             // 
-            this.ClearButton.Location = new System.Drawing.Point(740, 390);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(153, 36);
-            this.ClearButton.TabIndex = 4;
-            this.ClearButton.Text = "Clear Logs";
-            this.ClearButton.UseVisualStyleBackColor = true;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
-
+            this.objectListView1.AllColumns.Add(this.dt);
+            this.objectListView1.AllColumns.Add(this.tm);
+            this.objectListView1.AllColumns.Add(this.src);
+            this.objectListView1.AllColumns.Add(this.msg);
+            this.objectListView1.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.SingleClick;
+            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dt,
+            this.tm,
+            this.src,
+            this.msg});
+            this.objectListView1.Location = new System.Drawing.Point(12, 12);
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Size = new System.Drawing.Size(726, 372);
+            this.objectListView1.TabIndex = 5;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
+            this.objectListView1.SelectedIndexChanged += new System.EventHandler(this.objectListView1_SelectedIndexChanged);
+            // 
+            // dt
+            // 
+            this.dt.AspectName = "Date";
+            this.dt.IsEditable = false;
+            this.dt.Text = "Date";
+            this.dt.Width = 93;
+            // 
+            // tm
+            // 
+            this.tm.AspectName = "Time";
+            this.tm.IsEditable = false;
+            this.tm.Text = "Time";
+            this.tm.Width = 108;
+            // 
+            // src
+            // 
+            this.src.AspectName = "Source";
+            this.src.Text = "Source";
+            this.src.Width = 77;
+            // 
+            // msg
+            // 
+            this.msg.AspectName = "Msg";
+            this.msg.Text = "Log Message";
+            this.msg.Width = 198;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(585, 390);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(153, 36);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Remove Selected Logs";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 438);
-            this.Controls.Add(this.ClearButton);
+            this.ClientSize = new System.Drawing.Size(750, 451);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.logListView);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
+
+
         #endregion
 
-        private System.Windows.Forms.ListView logListView;
-        private System.Windows.Forms.ColumnHeader date;
-        private System.Windows.Forms.ColumnHeader time;
-        private System.Windows.Forms.ColumnHeader source;
-        private System.Windows.Forms.ColumnHeader logMessage;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button ClearButton;
+        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private BrightIdeasSoftware.OLVColumn dt;
+        private BrightIdeasSoftware.OLVColumn tm;
+        private BrightIdeasSoftware.OLVColumn src;
+        private BrightIdeasSoftware.OLVColumn msg;
+        private System.Windows.Forms.Button button3;
+       
+  
     }
 }
 

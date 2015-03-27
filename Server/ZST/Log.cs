@@ -13,6 +13,30 @@ namespace ZST
     {
         string[] info = new string[4];
 
+        public string Date
+        {
+            get { return info[0]; }
+            set { info[0] = value; }
+        }
+
+        public string Time
+        {
+            get { return info[1]; }
+            set { info[1] = value; }
+        }
+
+        public string Source
+        {
+            get { return info[2]; }
+            set { info[2] = value; }
+        }
+
+        public string Msg
+        {
+            get { return info[3]; }
+            set { info[3] = value; }
+        }
+
         public Log(XmlNode node)
         {
             info[0] = node.SelectSingleNode("Date").InnerText;

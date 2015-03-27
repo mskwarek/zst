@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrightIdeasSoftware;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -13,25 +14,15 @@ namespace ZST
     {
 
         static List<Log> logs = new List<Log>();
-        private ListView logListView;
+
+        private ObjectListView objlv;
         private string path;
         private Server server;
 
-        public string Path
+        public LogAgent(ObjectListView objlv)
         {
-            get
-            {
-                return path;
-            }
-            set
-            {
-                this.path = value;
-            }
-        }
-
-        public LogAgent(ListView logs)
-        {
-            this.logListView = logs;
+            //this.objlv = logs;
+            this.objlv = objlv;
 
             List<String> config = new List<String>();
             config = readConfig();
@@ -66,8 +57,7 @@ namespace ZST
         private List<Log> readLogs(XmlDocument xml)
         {
             List<Log> list = new List<Log>();
-            ListViewItem item = new ListViewItem();
-            item.ForeColor = Color.Blue;
+            
             XmlNodeList nodeList = xml.DocumentElement.SelectNodes("/Table/data");
 
             foreach (XmlNode xnode in nodeList)
@@ -95,15 +85,16 @@ namespace ZST
             {
                 list.Add(log);
                 var listViewItem = new ListViewItem(log.getLog());
-                this.logListView.Items.Add(listViewItem);
+                
+                this.objlv.AddObject(log);
             }
             else
             {
-                logListView.Invoke(new MethodInvoker(delegate()
+                objlv.Invoke(new MethodInvoker(delegate()
                 {
                     list.Add(log);
                     var listViewItem = new ListViewItem(log.getLog());
-                    this.logListView.Items.Add(listViewItem);})
+                    this.objlv.AddObject(log);})
                     );
             }
         }
@@ -115,7 +106,7 @@ namespace ZST
             try
             {
                 xml.Load(path);       
-                logs = readLogs(xml);
+                logs = logs.Concat(readLogs(xml)).ToList();
 
                 string[] filePath = path.Split('\\');
                 return true;
@@ -125,11 +116,6 @@ namespace ZST
                 Console.WriteLine(exp);
                 return false;
             }
-        }
-
-        public static void addLog(string[] msg)
-        {
-            logs.Add(new Log(msg));
         }
 
         public void saveLogsToFile(string path)
@@ -158,10 +144,15 @@ namespace ZST
             }
             
         }
-        public void clearList(ListView list)
+
+        public void removeLogs(List<int> toRemove)
         {
-            logs = new List<Log>();
-            list = new ListView();
+            toRemove.Sort();
+            for(int i = toRemove.Count-1; i>=0; i--)
+            {
+                logs.RemoveAt(toRemove[i]);
+            }
+
         }
 
         public void stopServer()
