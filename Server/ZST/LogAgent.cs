@@ -14,7 +14,6 @@ namespace ZST
     {
 
         static List<Log> logs = new List<Log>();
-        private string path;
         private Server server;
         private LogViewer logViewer;
 
@@ -71,7 +70,6 @@ namespace ZST
         private List<Log> readLogs(XmlDocument xml)
         {
             List<Log> list = new List<Log>();
-
             XmlNodeList nodeList = xml.DocumentElement.SelectNodes("/Table/data");
 
             foreach (XmlNode xnode in nodeList)

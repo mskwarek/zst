@@ -105,9 +105,6 @@ namespace ZST
                 else
                 {
                     string[] elem = signal.Split('&');
-                    //LogAgent.addLog(elem);
-
-
                     LogArgs myArgs = new LogArgs(elem);
                     OnNewLogRecived(this, myArgs);
 
