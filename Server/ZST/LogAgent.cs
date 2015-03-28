@@ -14,22 +14,18 @@ namespace ZST
     {
 
         static List<Log> logs = new List<Log>();
-
-        private ObjectListView objlv;
         private string path;
         private Server server;
+        private LogViewer logViewer;
 
         public LogAgent(ObjectListView objlv)
         {
-            //this.objlv = logs;
-            this.objlv = objlv;
-
+            logViewer = new LogViewer(objlv);
             List<String> config = new List<String>();
             config = readConfig();
             server = new Server();
             server.OnNewLogRecived += new Server.LogMsgHandler(updateList);
             server.startServer(config[0]);
-
         }
 
         private List<String> readConfig()
@@ -53,59 +49,13 @@ namespace ZST
             return list;
 
         }
-
-        private List<Log> readLogs(XmlDocument xml)
-        {
-            List<Log> list = new List<Log>();
-            
-            XmlNodeList nodeList = xml.DocumentElement.SelectNodes("/Table/data");
-
-            foreach (XmlNode xnode in nodeList)
-            {
-                Log log = new Log(xnode);
-                this.updateLogList(log, list);
-            }
-
-            return list;
-
-        }
-
-        private void updateList(object a, LogArgs e)
-        {
-
-            Log log = new Log(e.Message);
-            this.updateLogList(log, logs);
-        }
-
-        private void updateLogList(Log log, List<Log> list, bool anotherThread = true)
-        {
-            
-
-            if (!anotherThread)
-            {
-                list.Add(log);
-                var listViewItem = new ListViewItem(log.getLog());
-                
-                this.objlv.AddObject(log);
-            }
-            else
-            {
-                objlv.Invoke(new MethodInvoker(delegate()
-                {
-                    list.Add(log);
-                    var listViewItem = new ListViewItem(log.getLog());
-                    this.objlv.AddObject(log);})
-                    );
-            }
-        }
         public bool loadLogs(string path)
         {
-            this.path = path;
             XmlDocument xml = new XmlDocument();
 
             try
             {
-                xml.Load(path);       
+                xml.Load(path);
                 logs = logs.Concat(readLogs(xml)).ToList();
 
                 string[] filePath = path.Split('\\');
@@ -116,6 +66,22 @@ namespace ZST
                 Console.WriteLine(exp);
                 return false;
             }
+        }
+
+        private List<Log> readLogs(XmlDocument xml)
+        {
+            List<Log> list = new List<Log>();
+
+            XmlNodeList nodeList = xml.DocumentElement.SelectNodes("/Table/data");
+
+            foreach (XmlNode xnode in nodeList)
+            {
+                Log log = new Log(xnode);
+                this.logViewer.updateLogList(log, list);
+            }
+
+            return list;
+
         }
 
         public void saveLogsToFile(string path)
@@ -136,23 +102,29 @@ namespace ZST
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
                 writer.Close();
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("ex loading file" + ex.Message);
             }
-            
+
         }
 
         public void removeLogs(List<int> toRemove)
         {
             toRemove.Sort();
-            for(int i = toRemove.Count-1; i>=0; i--)
+            for (int i = toRemove.Count - 1; i >= 0; i--)
             {
                 logs.RemoveAt(toRemove[i]);
             }
 
+        }
+
+        private void updateList(object a, LogArgs e)
+        {
+            Log log = new Log(e.Message);
+            this.logViewer.updateLogList(log, logs);
         }
 
         public void stopServer()

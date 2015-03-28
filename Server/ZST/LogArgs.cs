@@ -15,8 +15,6 @@ namespace ZST
             this.message = message;
         }
 
-        // This is a straightforward implementation for 
-        // declaring a public field
         public string[] Message
         {
             get
