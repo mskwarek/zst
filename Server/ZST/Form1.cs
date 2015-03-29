@@ -13,12 +13,25 @@ using BrightIdeasSoftware;
 
 namespace ZST
 {
+    /// <summary>
+    /// Klasa reprezentująca okienko aplikacji
+    /// </summary>
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// instancja klasy logAgent
+        /// </summary>
         private LogAgent logAgent;
+
+        /// <summary>
+        /// Lista zaznaczonych logów, używana do późniejszego odpowiedniego usunięcia 
+        /// (na życzenie użytkownika)
+        /// </summary>
         private List<int> selected;
         
-
+        /// <summary>
+        /// Konstruktor klasy okienka aplikacji
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -27,22 +40,42 @@ namespace ZST
             
         }
 
+        /// <summary>
+        /// metoda uruchamiana po wciśnięciu 1. przycisku (czytanie logów)
+        /// </summary>
+        /// <param name="sender">obiekt wysyłający zdarzenie</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void button1_Click(object sender, EventArgs e)
         {  
             openFileDialog.ShowDialog();
         }
 
+        /// <summary>
+        /// Metoda uruchamiana po wybraniu pliku
+        /// </summary>
+        /// <param name="sender">obiekt wysyłający zdarzenie</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void openFileDialog_FileOk(object sender, CancelEventArgs e)
         {
             logAgent.loadLogs(openFileDialog.FileName);
         }
 
+        /// <summary>
+        /// metoda uruchamiana po wciśnięciu 2. przycisku (zapis logów do pliku)
+        /// </summary>
+        /// <param name="sender">obiekt wysyłający zdarzenie</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void button2_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             
         }
 
+        /// <summary>
+        /// metoda wywoływana po wybraniu miejsca zapisu logów
+        /// </summary>
+        /// <param name="sender">obiekt wysyłający zdarzenie</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             this.logAgent.saveLogsToFile(openFileDialog1.FileName);
@@ -50,11 +83,10 @@ namespace ZST
             MessageBox.Show("XML File created ! ");
         }
 
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Przeciążona metoda wywoływana na skutek próbu zamknięcia okienka
+        /// </summary>
+        /// <param name="e">otrzymane zdarzenie</param>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
@@ -79,6 +111,11 @@ namespace ZST
 
         }
 
+        /// <summary>
+        /// metoda wywoływana przy próbie usunięcia logów z listy
+        /// </summary>
+        /// <param name="sender">obiekt wysyłający zdarzenie</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void button3_Click(object sender, EventArgs e)
         {
             selected.Clear();

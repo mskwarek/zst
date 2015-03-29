@@ -1,0 +1,81 @@
+\hypertarget{class_windows_forms_application3_1_1_form1}{}\section{Dokumentacja klasy Windows\+Forms\+Application3.\+Form1}
+\label{class_windows_forms_application3_1_1_form1}\index{Windows\+Forms\+Application3.\+Form1@{Windows\+Forms\+Application3.\+Form1}}
+
+
+Klasa reprezentująca okno aplikacji  
+
+
+
+
+Diagram dziedziczenia dla Windows\+Forms\+Application3.\+Form1
+% FIG 0
+
+
+Diagram współpracy dla Windows\+Forms\+Application3.\+Form1\+:
+% FIG 1
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_windows_forms_application3_1_1_form1_a48366c981585157eeb906d8309bfa035}{Form1} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy form \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_windows_forms_application3_1_1_form1_a441acc637a89bc137cd3deb11d11ae43}{Dispose} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentująca okno aplikacji 
+
+
+
+Definicja w linii 16 pliku Form1.\+cs.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_windows_forms_application3_1_1_form1_a48366c981585157eeb906d8309bfa035}{}\index{Windows\+Forms\+Application3\+::\+Form1@{Windows\+Forms\+Application3\+::\+Form1}!Form1@{Form1}}
+\index{Form1@{Form1}!Windows\+Forms\+Application3\+::\+Form1@{Windows\+Forms\+Application3\+::\+Form1}}
+\subsubsection[{Form1}]{\setlength{\rightskip}{0pt plus 5cm}Windows\+Forms\+Application3.\+Form1.\+Form1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_windows_forms_application3_1_1_form1_a48366c981585157eeb906d8309bfa035}
+
+
+Konstruktor klasy form 
+
+
+
+Definicja w linii 26 pliku Form1.\+cs.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_windows_forms_application3_1_1_form1_a441acc637a89bc137cd3deb11d11ae43}{}\index{Windows\+Forms\+Application3\+::\+Form1@{Windows\+Forms\+Application3\+::\+Form1}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Windows\+Forms\+Application3\+::\+Form1@{Windows\+Forms\+Application3\+::\+Form1}}
+\subsubsection[{Dispose}]{\setlength{\rightskip}{0pt plus 5cm}override void Windows\+Forms\+Application3.\+Form1.\+Dispose (
+\begin{DoxyParamCaption}
+\item[{bool}]{disposing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_windows_forms_application3_1_1_form1_a441acc637a89bc137cd3deb11d11ae43}
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 14 pliku Form1.\+Designer.\+cs.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+Windows\+Forms\+Application3/\hyperlink{_form1_8cs}{Form1.\+cs}\item 
+Windows\+Forms\+Application3/\hyperlink{_form1_8_designer_8cs}{Form1.\+Designer.\+cs}\end{DoxyCompactItemize}

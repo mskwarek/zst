@@ -1,0 +1,156 @@
+\hypertarget{class_z_s_t_1_1_log_agent}{}\section{Dokumentacja klasy Z\+S\+T.\+Log\+Agent}
+\label{class_z_s_t_1_1_log_agent}\index{Z\+S\+T.\+Log\+Agent@{Z\+S\+T.\+Log\+Agent}}
+
+
+Klasa pozwalająca na zdalny zapis logów  
+
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_z_s_t_1_1_log_agent_ae8069c077b97c2279e968d9035af26bd}{Log\+Agent} (Object\+List\+View objlv)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{class_z_s_t_1_1_log_agent}{Log\+Agent} \end{DoxyCompactList}\item 
+bool \hyperlink{class_z_s_t_1_1_log_agent_aea2dd7532c7e8ec5a83090e82f0d0dc6}{load\+Logs} (string path)
+\begin{DoxyCompactList}\small\item\em wczytywanie Logów z pliku \end{DoxyCompactList}\item 
+void \hyperlink{class_z_s_t_1_1_log_agent_a97f26bbd103d88b925de8255744b1d80}{save\+Logs\+To\+File} (string path)
+\begin{DoxyCompactList}\small\item\em zapis logów do pliku \end{DoxyCompactList}\item 
+void \hyperlink{class_z_s_t_1_1_log_agent_aaeff335322e7f2bce588f1fee8e1f8ab}{remove\+Logs} (List$<$ int $>$ to\+Remove)
+\begin{DoxyCompactList}\small\item\em Usuwanie Logów \end{DoxyCompactList}\item 
+void \hyperlink{class_z_s_t_1_1_log_agent_a5d2a7cf19d74252ff007a5eef86e0da3}{stop\+Server} ()
+\begin{DoxyCompactList}\small\item\em Zatrzymanie działania serwera (zwolnienie zasobów) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa pozwalająca na zdalny zapis logów 
+
+
+
+Definicja w linii 16 pliku Log\+Agent.\+cs.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_z_s_t_1_1_log_agent_ae8069c077b97c2279e968d9035af26bd}{}\index{Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}!Log\+Agent@{Log\+Agent}}
+\index{Log\+Agent@{Log\+Agent}!Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}}
+\subsubsection[{Log\+Agent}]{\setlength{\rightskip}{0pt plus 5cm}Z\+S\+T.\+Log\+Agent.\+Log\+Agent (
+\begin{DoxyParamCaption}
+\item[{Object\+List\+View}]{objlv}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_agent_ae8069c077b97c2279e968d9035af26bd}
+
+
+Konstruktor klasy \hyperlink{class_z_s_t_1_1_log_agent}{Log\+Agent} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em objlv} & Object List View -\/ miejsce wyświetlania logów\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 37 pliku Log\+Agent.\+cs.
+
+
+
+Oto graf wywołań dla tej funkcji\+:
+% FIG 0
+
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_z_s_t_1_1_log_agent_aea2dd7532c7e8ec5a83090e82f0d0dc6}{}\index{Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}!load\+Logs@{load\+Logs}}
+\index{load\+Logs@{load\+Logs}!Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}}
+\subsubsection[{load\+Logs}]{\setlength{\rightskip}{0pt plus 5cm}bool Z\+S\+T.\+Log\+Agent.\+load\+Logs (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_agent_aea2dd7532c7e8ec5a83090e82f0d0dc6}
+
+
+wczytywanie Logów z pliku 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & ścieżka do pliku\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wynik (udany, nieudany zapis do pliku)
+\end{DoxyReturn}
+
+
+Definicja w linii 77 pliku Log\+Agent.\+cs.
+
+\hypertarget{class_z_s_t_1_1_log_agent_aaeff335322e7f2bce588f1fee8e1f8ab}{}\index{Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}!remove\+Logs@{remove\+Logs}}
+\index{remove\+Logs@{remove\+Logs}!Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}}
+\subsubsection[{remove\+Logs}]{\setlength{\rightskip}{0pt plus 5cm}void Z\+S\+T.\+Log\+Agent.\+remove\+Logs (
+\begin{DoxyParamCaption}
+\item[{List$<$ int $>$}]{to\+Remove}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_agent_aaeff335322e7f2bce588f1fee8e1f8ab}
+
+
+Usuwanie Logów 
+
+
+\begin{DoxyParams}{Parametry}
+{\em to\+Remove} & Lista indeksów logów do usunięcia\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 148 pliku Log\+Agent.\+cs.
+
+\hypertarget{class_z_s_t_1_1_log_agent_a97f26bbd103d88b925de8255744b1d80}{}\index{Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}!save\+Logs\+To\+File@{save\+Logs\+To\+File}}
+\index{save\+Logs\+To\+File@{save\+Logs\+To\+File}!Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}}
+\subsubsection[{save\+Logs\+To\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Z\+S\+T.\+Log\+Agent.\+save\+Logs\+To\+File (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_agent_a97f26bbd103d88b925de8255744b1d80}
+
+
+zapis logów do pliku 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & ścieżka do pliku\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 118 pliku Log\+Agent.\+cs.
+
+
+
+Oto graf wywołań dla tej funkcji\+:
+% FIG 1
+
+
+\hypertarget{class_z_s_t_1_1_log_agent_a5d2a7cf19d74252ff007a5eef86e0da3}{}\index{Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}!stop\+Server@{stop\+Server}}
+\index{stop\+Server@{stop\+Server}!Z\+S\+T\+::\+Log\+Agent@{Z\+S\+T\+::\+Log\+Agent}}
+\subsubsection[{stop\+Server}]{\setlength{\rightskip}{0pt plus 5cm}void Z\+S\+T.\+Log\+Agent.\+stop\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_agent_a5d2a7cf19d74252ff007a5eef86e0da3}
+
+
+Zatrzymanie działania serwera (zwolnienie zasobów) 
+
+
+
+Definicja w linii 171 pliku Log\+Agent.\+cs.
+
+
+
+Oto graf wywoływań tej funkcji\+:
+% FIG 2
+
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Z\+S\+T/\hyperlink{_log_agent_8cs}{Log\+Agent.\+cs}\end{DoxyCompactItemize}

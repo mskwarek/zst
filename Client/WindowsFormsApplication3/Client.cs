@@ -10,14 +10,34 @@ using System.Xml;
 
 namespace WindowsFormsApplication3
 {
+    /// <summary>
+    /// Klasa klienta
+    /// </summary>
     class Client
     {
+        /// <summary>
+        /// Użyty enkoder do odkodowywania/zakodowywania wiadomości
+        /// </summary>
         private ASCIIEncoding encoder;
+
+        /// <summary>
+        /// Klient TCP
+        /// </summary>
         private TcpClient client;
+
+        /// <summary>
+        /// strumeń siociowy
+        /// </summary>
         private NetworkStream stream;
-        private Thread clientThread;
+
+        /// <summary>
+        /// Lista konfiguracyjna
+        /// </summary>
         private List<String> conf;
 
+        /// <summary>
+        /// Konstruktor klasy klienta
+        /// </summary>
         public Client()
         {
             this.encoder = new ASCIIEncoding();
@@ -25,6 +45,10 @@ namespace WindowsFormsApplication3
 
         }
 
+        /// <summary>
+        /// metoda odczytująca konfigurację klienta
+        /// </summary>
+        /// <returns>listę konfiguracyjną (port, IP serwera)</returns>
         private List<String> readConfig()
         {
             XmlDocument xml = new XmlDocument();
@@ -42,12 +66,13 @@ namespace WindowsFormsApplication3
                 string serverIP = xnode.Attributes[1].Value;
                 list.Add(serverIP);
             }
-
             return list;
-
         }
 
-
+        /// <summary>
+        /// metoda łącząca klienta z serwerem
+        /// </summary>
+        /// <returns>wynik operacji (powodzenia/niepowodzenie)</returns>
         public bool connect()
         {
             string ip = conf[1];
@@ -74,8 +99,6 @@ namespace WindowsFormsApplication3
             if (client.Connected)
             {
                 stream = client.GetStream();
-                clientThread = new Thread(new ThreadStart(displayMessageReceived));
-                clientThread.Start();
                 sendMyName();
                
                 return true;
@@ -88,6 +111,9 @@ namespace WindowsFormsApplication3
             }
         }
 
+        /// <summary>
+        /// Metoda wysyłająca identyfikator klienta do serwera
+        /// </summary>
         private void sendMyName()
         {
             {
@@ -97,36 +123,10 @@ namespace WindowsFormsApplication3
             }
         }
 
-        private void displayMessageReceived()
-        {
-            byte[] message = new byte[4096];
-            int bytesRead;
-
-            while (stream.CanRead)
-            {
-                bytesRead = 0;
-                try
-                {
-                    bytesRead = stream.Read(message, 0, 4096);
-                }
-                catch
-                {
-                    break;
-                }
-
-                if (bytesRead == 0)
-                {
-                    break;
-                }
-                string strMessage = encoder.GetString(message, 0, bytesRead);
-                //this.parserEA.parseMessageFromEA(strMessage);
-            }
-            if (client != null)
-            {
-                disconnect(true);
-            }
-        }
-
+        /// <summary>
+        /// Rozłączenie klienta z serwerem
+        /// </summary>
+        /// <param name="error">parametr określający czy rozłączenie wystąpiło z powodu błędu</param>
         public void disconnect(bool error = false)
         {
             if (client != null)
@@ -143,16 +143,19 @@ namespace WindowsFormsApplication3
                 }
                 if (!error)
                 {
-                    //logs.addLog(Constants.CONNECTION_DISCONNECTED, true, Constants.LOG_INFO, true);
+
                 }
                 else
                 {
-                    //logs.addLog(Constants.CONNECTION_DISCONNECTED_ERROR, true, Constants.LOG_ERROR, true);
-                    //form.Invoke(new MethodInvoker(delegate() { form.buttonsEnabled(); }));
+
                 }
             }
         }
 
+        /// <summary>
+        /// Wysyłanie wiadomości
+        /// </summary>
+        /// <param name="msg">wiadomość do wysłania</param>
         public void sendMessage(string msg)
         {
             if (client != null && client.Connected && msg != "")
@@ -164,6 +167,10 @@ namespace WindowsFormsApplication3
             }
         }
 
+        /// <summary>
+        /// Pobieranie lokalnego adresu IP komputera
+        /// </summary>
+        /// <returns>IP klienta</returns>
         private string LocalIPAddress()
         {
             IPHostEntry host;

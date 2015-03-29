@@ -1,0 +1,109 @@
+\hypertarget{class_z_s_t_1_1_form1}{}\section{Dokumentacja klasy Z\+S\+T.\+Form1}
+\label{class_z_s_t_1_1_form1}\index{Z\+S\+T.\+Form1@{Z\+S\+T.\+Form1}}
+
+
+Klasa reprezentująca okienko aplikacji  
+
+
+
+
+Diagram dziedziczenia dla Z\+S\+T.\+Form1
+% FIG 0
+
+
+Diagram współpracy dla Z\+S\+T.\+Form1\+:
+% FIG 1
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_z_s_t_1_1_form1_adb124d119975d69435c67d0b1c3165d0}{Form1} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy okienka aplikacji \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_z_s_t_1_1_form1_ad345d5d88f9d7b9a292987a2576a8fc0}{On\+Form\+Closing} (Form\+Closing\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Przeciążona metoda wywoływana na skutek próbu zamknięcia okienka \end{DoxyCompactList}\item 
+override void \hyperlink{class_z_s_t_1_1_form1_a3c969c64b7dc253cc60cccf9fde8a905}{Dispose} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentująca okienko aplikacji 
+
+
+
+Definicja w linii 19 pliku Form1.\+cs.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_z_s_t_1_1_form1_adb124d119975d69435c67d0b1c3165d0}{}\index{Z\+S\+T\+::\+Form1@{Z\+S\+T\+::\+Form1}!Form1@{Form1}}
+\index{Form1@{Form1}!Z\+S\+T\+::\+Form1@{Z\+S\+T\+::\+Form1}}
+\subsubsection[{Form1}]{\setlength{\rightskip}{0pt plus 5cm}Z\+S\+T.\+Form1.\+Form1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_form1_adb124d119975d69435c67d0b1c3165d0}
+
+
+Konstruktor klasy okienka aplikacji 
+
+
+
+Definicja w linii 35 pliku Form1.\+cs.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_z_s_t_1_1_form1_a3c969c64b7dc253cc60cccf9fde8a905}{}\index{Z\+S\+T\+::\+Form1@{Z\+S\+T\+::\+Form1}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Z\+S\+T\+::\+Form1@{Z\+S\+T\+::\+Form1}}
+\subsubsection[{Dispose}]{\setlength{\rightskip}{0pt plus 5cm}override void Z\+S\+T.\+Form1.\+Dispose (
+\begin{DoxyParamCaption}
+\item[{bool}]{disposing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_z_s_t_1_1_form1_a3c969c64b7dc253cc60cccf9fde8a905}
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 18 pliku Form1.\+Designer.\+cs.
+
+\hypertarget{class_z_s_t_1_1_form1_ad345d5d88f9d7b9a292987a2576a8fc0}{}\index{Z\+S\+T\+::\+Form1@{Z\+S\+T\+::\+Form1}!On\+Form\+Closing@{On\+Form\+Closing}}
+\index{On\+Form\+Closing@{On\+Form\+Closing}!Z\+S\+T\+::\+Form1@{Z\+S\+T\+::\+Form1}}
+\subsubsection[{On\+Form\+Closing}]{\setlength{\rightskip}{0pt plus 5cm}override void Z\+S\+T.\+Form1.\+On\+Form\+Closing (
+\begin{DoxyParamCaption}
+\item[{Form\+Closing\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_z_s_t_1_1_form1_ad345d5d88f9d7b9a292987a2576a8fc0}
+
+
+Przeciążona metoda wywoływana na skutek próbu zamknięcia okienka 
+
+
+\begin{DoxyParams}{Parametry}
+{\em e} & otrzymane zdarzenie\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 90 pliku Form1.\+cs.
+
+
+
+Oto graf wywołań dla tej funkcji\+:
+% FIG 2
+
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+Z\+S\+T/\hyperlink{_form1_8cs}{Form1.\+cs}\item 
+Z\+S\+T/\hyperlink{_form1_8_designer_8cs}{Form1.\+Designer.\+cs}\end{DoxyCompactItemize}

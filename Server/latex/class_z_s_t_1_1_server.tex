@@ -1,0 +1,135 @@
+\hypertarget{class_z_s_t_1_1_server}{}\section{Dokumentacja klasy Z\+S\+T.\+Server}
+\label{class_z_s_t_1_1_server}\index{Z\+S\+T.\+Server@{Z\+S\+T.\+Server}}
+
+
+Klasa serwera  
+
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \hyperlink{class_z_s_t_1_1_server_abaa63d4c934148fd07c8ee4cbb9e278e}{Log\+Msg\+Handler} (object my\+Object, \hyperlink{class_z_s_t_1_1_log_args}{Log\+Args} my\+Args)
+\begin{DoxyCompactList}\small\item\em Obiekt obsługujący zdarzenie nadejścia nowego Logu \end{DoxyCompactList}\item 
+\hyperlink{class_z_s_t_1_1_server_a377d8cf68ee9d3bbe0ce6ab3c90fba17}{Server} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy serwera \end{DoxyCompactList}\item 
+bool \hyperlink{class_z_s_t_1_1_server_a3367575ca578e4ece899085f19bd9c09}{start\+Server} (string port)
+\begin{DoxyCompactList}\small\item\em Metoda startująca serwer \end{DoxyCompactList}\item 
+void \hyperlink{class_z_s_t_1_1_server_aa5e06d4cdb7d5919cbb49a43602d0a7f}{stop\+Server} ()
+\begin{DoxyCompactList}\small\item\em zatrzymanie działania serwera \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Zdarzenia}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_z_s_t_1_1_server_abaa63d4c934148fd07c8ee4cbb9e278e}{Log\+Msg\+Handler} \hyperlink{class_z_s_t_1_1_server_a1f31932af9efeb93ae403ced7cc28ce4}{On\+New\+Log\+Recived}
+\begin{DoxyCompactList}\small\item\em zdarzenie otrzymania nowego Logu \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa serwera 
+
+
+
+Definicja w linii 15 pliku Server.\+cs.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_z_s_t_1_1_server_a377d8cf68ee9d3bbe0ce6ab3c90fba17}{}\index{Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}}
+\subsubsection[{Server}]{\setlength{\rightskip}{0pt plus 5cm}Z\+S\+T.\+Server.\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_server_a377d8cf68ee9d3bbe0ce6ab3c90fba17}
+
+
+Konstruktor klasy serwera 
+
+
+
+Definicja w linii 57 pliku Server.\+cs.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_z_s_t_1_1_server_abaa63d4c934148fd07c8ee4cbb9e278e}{}\index{Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}!Log\+Msg\+Handler@{Log\+Msg\+Handler}}
+\index{Log\+Msg\+Handler@{Log\+Msg\+Handler}!Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}}
+\subsubsection[{Log\+Msg\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Z\+S\+T.\+Server.\+Log\+Msg\+Handler (
+\begin{DoxyParamCaption}
+\item[{object}]{my\+Object, }
+\item[{{\bf Log\+Args}}]{my\+Args}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_server_abaa63d4c934148fd07c8ee4cbb9e278e}
+
+
+Obiekt obsługujący zdarzenie nadejścia nowego Logu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em my\+Object} & obiekt wysyłający zdarzenie\\
+\hline
+{\em my\+Args} & wysyłane zdarzenie\\
+\hline
+\end{DoxyParams}
+
+
+Oto graf wywoływań tej funkcji\+:
+% FIG 0
+
+
+\hypertarget{class_z_s_t_1_1_server_a3367575ca578e4ece899085f19bd9c09}{}\index{Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}!start\+Server@{start\+Server}}
+\index{start\+Server@{start\+Server}!Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}}
+\subsubsection[{start\+Server}]{\setlength{\rightskip}{0pt plus 5cm}bool Z\+S\+T.\+Server.\+start\+Server (
+\begin{DoxyParamCaption}
+\item[{string}]{port}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_server_a3367575ca578e4ece899085f19bd9c09}
+
+
+Metoda startująca serwer 
+
+
+\begin{DoxyParams}{Parametry}
+{\em port} & port na którym serwer ma pracować\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wynik operacji (udana/nieudana)
+\end{DoxyReturn}
+
+
+Definicja w linii 68 pliku Server.\+cs.
+
+\hypertarget{class_z_s_t_1_1_server_aa5e06d4cdb7d5919cbb49a43602d0a7f}{}\index{Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}!stop\+Server@{stop\+Server}}
+\index{stop\+Server@{stop\+Server}!Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}}
+\subsubsection[{stop\+Server}]{\setlength{\rightskip}{0pt plus 5cm}void Z\+S\+T.\+Server.\+stop\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_server_aa5e06d4cdb7d5919cbb49a43602d0a7f}
+
+
+zatrzymanie działania serwera 
+
+
+
+Definicja w linii 89 pliku Server.\+cs.
+
+
+
+\subsection{Dokumentacja zdarzeń}
+\hypertarget{class_z_s_t_1_1_server_a1f31932af9efeb93ae403ced7cc28ce4}{}\index{Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}!On\+New\+Log\+Recived@{On\+New\+Log\+Recived}}
+\index{On\+New\+Log\+Recived@{On\+New\+Log\+Recived}!Z\+S\+T\+::\+Server@{Z\+S\+T\+::\+Server}}
+\subsubsection[{On\+New\+Log\+Recived}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log\+Msg\+Handler} Z\+S\+T.\+Server.\+On\+New\+Log\+Recived}\label{class_z_s_t_1_1_server_a1f31932af9efeb93ae403ced7cc28ce4}
+
+
+zdarzenie otrzymania nowego Logu 
+
+
+
+Definicja w linii 52 pliku Server.\+cs.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Z\+S\+T/\hyperlink{_server_8cs}{Server.\+cs}\end{DoxyCompactItemize}

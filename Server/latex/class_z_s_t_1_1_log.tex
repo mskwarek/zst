@@ -1,0 +1,186 @@
+\hypertarget{class_z_s_t_1_1_log}{}\section{Dokumentacja klasy Z\+S\+T.\+Log}
+\label{class_z_s_t_1_1_log}\index{Z\+S\+T.\+Log@{Z\+S\+T.\+Log}}
+
+
+Klasa reprezentująca pojedyńczy log (zapis w dzienniku zdarzen)  
+
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_z_s_t_1_1_log_a07cddad83ae898c2c6013a2b5c20d6d8}{Log} (Xml\+Node node)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{class_z_s_t_1_1_log}{Log} \end{DoxyCompactList}\item 
+\hyperlink{class_z_s_t_1_1_log_aea522d0f2791697d32fd1d30df121391}{Log} (string\mbox{[}$\,$\mbox{]} msg)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{class_z_s_t_1_1_log}{Log} \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \hyperlink{class_z_s_t_1_1_log_a1c256684db52090c18ade4f4a8058157}{get\+Log} ()
+\begin{DoxyCompactList}\small\item\em pobieranie informacji o całym zapisie w dzienniku \end{DoxyCompactList}\item 
+void \hyperlink{class_z_s_t_1_1_log_a96caeb14ebf1c3b16ca33fe71e42e962}{create\+Node} (Xml\+Text\+Writer writer)
+\begin{DoxyCompactList}\small\item\em Zapisanie pojedyńczego Logu jako węzła X\+M\+Lowego \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_z_s_t_1_1_log_a18e6ee60e833732b553f991aca086217}{Date}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pobieranie i ustawianie daty \end{DoxyCompactList}\item 
+string \hyperlink{class_z_s_t_1_1_log_a80ca6c06e14d09edc94cbd0c0e21b8ee}{Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em pobieranie i ustawianie czasu \end{DoxyCompactList}\item 
+string \hyperlink{class_z_s_t_1_1_log_a341d360d9362ea78c23dcfdde1ad3075}{Source}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em pobieranie i ustawianie źródła od którego pochodzi zapis w dzienniku \end{DoxyCompactList}\item 
+string \hyperlink{class_z_s_t_1_1_log_a66573e9f4fe9a03aa42c2106b23c7b69}{Msg}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em pobieranie i ustawianie tekstu wiadomości \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentująca pojedyńczy log (zapis w dzienniku zdarzen) 
+
+
+
+Definicja w linii 15 pliku Log.\+cs.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_z_s_t_1_1_log_a07cddad83ae898c2c6013a2b5c20d6d8}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Log@{Log}}
+\index{Log@{Log}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Z\+S\+T.\+Log.\+Log (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{node}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_a07cddad83ae898c2c6013a2b5c20d6d8}
+
+
+Konstruktor klasy \hyperlink{class_z_s_t_1_1_log}{Log} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em node} & węzeł z pliku xml zawierający informacje o Logu\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 62 pliku Log.\+cs.
+
+\hypertarget{class_z_s_t_1_1_log_aea522d0f2791697d32fd1d30df121391}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Log@{Log}}
+\index{Log@{Log}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Z\+S\+T.\+Log.\+Log (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{msg}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_aea522d0f2791697d32fd1d30df121391}
+
+
+Konstruktor klasy \hyperlink{class_z_s_t_1_1_log}{Log} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em msg} & tekst wiadomości z jaką chcemy utworzyć zapis\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 74 pliku Log.\+cs.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_z_s_t_1_1_log_a96caeb14ebf1c3b16ca33fe71e42e962}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!create\+Node@{create\+Node}}
+\index{create\+Node@{create\+Node}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{create\+Node}]{\setlength{\rightskip}{0pt plus 5cm}void Z\+S\+T.\+Log.\+create\+Node (
+\begin{DoxyParamCaption}
+\item[{Xml\+Text\+Writer}]{writer}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_a96caeb14ebf1c3b16ca33fe71e42e962}
+
+
+Zapisanie pojedyńczego Logu jako węzła X\+M\+Lowego 
+
+
+\begin{DoxyParams}{Parametry}
+{\em writer} & X\+M\+L gdzie należy zapisać \hyperlink{class_z_s_t_1_1_log}{Log}\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 91 pliku Log.\+cs.
+
+
+
+Oto graf wywoływań tej funkcji\+:
+% FIG 0
+
+
+\hypertarget{class_z_s_t_1_1_log_a1c256684db52090c18ade4f4a8058157}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!get\+Log@{get\+Log}}
+\index{get\+Log@{get\+Log}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{get\+Log}]{\setlength{\rightskip}{0pt plus 5cm}string \mbox{[}$\,$\mbox{]} Z\+S\+T.\+Log.\+get\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_z_s_t_1_1_log_a1c256684db52090c18ade4f4a8058157}
+
+
+pobieranie informacji o całym zapisie w dzienniku 
+
+\begin{DoxyReturn}{Zwraca}
+informacje o \hyperlink{class_z_s_t_1_1_log}{Log}
+\end{DoxyReturn}
+
+
+Definicja w linii 83 pliku Log.\+cs.
+
+
+
+Oto graf wywoływań tej funkcji\+:
+% FIG 1
+
+
+
+
+\subsection{Dokumentacja właściwości}
+\hypertarget{class_z_s_t_1_1_log_a18e6ee60e833732b553f991aca086217}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Date@{Date}}
+\index{Date@{Date}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Date}]{\setlength{\rightskip}{0pt plus 5cm}string Z\+S\+T.\+Log.\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_a18e6ee60e833732b553f991aca086217}
+
+
+Pobieranie i ustawianie daty 
+
+
+
+Definicja w linii 26 pliku Log.\+cs.
+
+\hypertarget{class_z_s_t_1_1_log_a66573e9f4fe9a03aa42c2106b23c7b69}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Msg@{Msg}}
+\index{Msg@{Msg}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Msg}]{\setlength{\rightskip}{0pt plus 5cm}string Z\+S\+T.\+Log.\+Msg\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_a66573e9f4fe9a03aa42c2106b23c7b69}
+
+
+pobieranie i ustawianie tekstu wiadomości 
+
+
+
+Definicja w linii 53 pliku Log.\+cs.
+
+\hypertarget{class_z_s_t_1_1_log_a341d360d9362ea78c23dcfdde1ad3075}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Source@{Source}}
+\index{Source@{Source}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Source}]{\setlength{\rightskip}{0pt plus 5cm}string Z\+S\+T.\+Log.\+Source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_a341d360d9362ea78c23dcfdde1ad3075}
+
+
+pobieranie i ustawianie źródła od którego pochodzi zapis w dzienniku 
+
+
+
+Definicja w linii 44 pliku Log.\+cs.
+
+\hypertarget{class_z_s_t_1_1_log_a80ca6c06e14d09edc94cbd0c0e21b8ee}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Time@{Time}}
+\index{Time@{Time}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Time}]{\setlength{\rightskip}{0pt plus 5cm}string Z\+S\+T.\+Log.\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_a80ca6c06e14d09edc94cbd0c0e21b8ee}
+
+
+pobieranie i ustawianie czasu 
+
+
+
+Definicja w linii 35 pliku Log.\+cs.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Z\+S\+T/\hyperlink{_log_8cs}{Log.\+cs}\end{DoxyCompactItemize}

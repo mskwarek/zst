@@ -1,0 +1,11 @@
+digraph "WindowsFormsApplication3" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_96caad0166c2d8dcea48ec6de6940029 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_96caad0166c2d8dcea48ec6de6940029.html"];
+    dir_96caad0166c2d8dcea48ec6de6940029 [shape=plaintext label="WindowsFormsApplication3"];
+    dir_a3513742d7318ad19be6c86f421f80cb [shape=box label="obj" color="red" fillcolor="white" style="filled" URL="dir_a3513742d7318ad19be6c86f421f80cb.html"];
+    dir_a4daaf9de8925c0db3cf8e1922a322e4 [shape=box label="Properties" color="black" fillcolor="white" style="filled" URL="dir_a4daaf9de8925c0db3cf8e1922a322e4.html"];
+  }
+}

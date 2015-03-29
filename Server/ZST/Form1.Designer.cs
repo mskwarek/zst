@@ -32,6 +32,7 @@ namespace ZST
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.button2 = new System.Windows.Forms.Button();
@@ -93,11 +94,10 @@ namespace ZST
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.Size = new System.Drawing.Size(726, 372);
             this.objectListView1.TabIndex = 5;
+            this.objectListView1.UseCellFormatEvents = true;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             this.objectListView1.SelectedIndexChanged += new System.EventHandler(this.objectListView1_SelectedIndexChanged);
-            this.objectListView1.UseCellFormatEvents = true;
-                  
             // 
             // dt
             // 
@@ -144,8 +144,9 @@ namespace ZST
             this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Server";
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.ResumeLayout(false);
 

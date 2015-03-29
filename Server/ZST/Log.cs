@@ -9,34 +9,56 @@ using System.Xml.Linq;
 
 namespace ZST
 {
+    /// <summary>
+    /// Klasa reprezentująca pojedyńczy log (zapis w dzienniku zdarzen)
+    /// </summary>
     class Log
     {
+        /// <summary>
+        /// informacje przechowywane w 4 rozmiarowej tablicy stringów
+        /// </summary>
         string[] info = new string[4];
 
+        /// <summary>
+        /// Pobieranie i ustawianie daty
+        /// </summary>
         public string Date
         {
             get { return info[0]; }
             set { info[0] = value; }
         }
 
+        /// <summary>
+        /// pobieranie i ustawianie czasu
+        /// </summary>
         public string Time
         {
             get { return info[1]; }
             set { info[1] = value; }
         }
 
+        /// <summary>
+        /// pobieranie i ustawianie źródła od którego pochodzi zapis w dzienniku
+        /// </summary>
         public string Source
         {
             get { return info[2]; }
             set { info[2] = value; }
         }
 
+        /// <summary>
+        /// pobieranie i ustawianie tekstu wiadomości
+        /// </summary>
         public string Msg
         {
             get { return info[3]; }
             set { info[3] = value; }
         }
 
+        /// <summary>
+        /// Konstruktor klasy Log
+        /// </summary>
+        /// <param name="node">węzeł z pliku xml zawierający informacje o Logu</param>
         public Log(XmlNode node)
         {
             info[0] = node.SelectSingleNode("Date").InnerText;
@@ -45,15 +67,27 @@ namespace ZST
             info[3] = node.SelectSingleNode("LogMessage").InnerText;
         }
 
+        /// <summary>
+        /// Konstruktor klasy Log
+        /// </summary>
+        /// <param name="msg">tekst wiadomości z jaką chcemy utworzyć zapis</param>
         public Log(string[] msg)
         {
             info = msg;
         }
 
+        /// <summary>
+        /// pobieranie informacji o całym zapisie w dzienniku
+        /// </summary>
+        /// <returns>informacje o Log</returns>
         public string[] getLog(){
             return info;
         }
 
+        /// <summary>
+        /// Zapisanie pojedyńczego Logu jako węzła XMLowego
+        /// </summary>
+        /// <param name="writer">XML gdzie należy zapisać Log</param>
         public void createNode(XmlTextWriter writer)
         {
             writer.WriteStartElement("data");

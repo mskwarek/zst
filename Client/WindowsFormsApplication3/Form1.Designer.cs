@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.logMsgTextBox = new System.Windows.Forms.TextBox();
             this.sendMsgButton = new System.Windows.Forms.Button();
             this.connectButton = new System.Windows.Forms.Button();
@@ -70,8 +71,9 @@
             this.Controls.Add(this.connectButton);
             this.Controls.Add(this.sendMsgButton);
             this.Controls.Add(this.logMsgTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Client";
             this.ResumeLayout(false);
             this.PerformLayout();
 
