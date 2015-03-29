@@ -18,7 +18,14 @@ namespace ZST
         /// informacje przechowywane w 4 rozmiarowej tablicy stringów
         /// </summary>
         string[] info = new string[4];
+        public enum logType { Warning, Minor, Major, Critical, Cleared, Indeterminate };
+        logType type;
 
+        public logType Type
+        {
+            get {return type;}
+            set {type = value;}
+        }
         /// <summary>
         /// Pobieranie i ustawianie daty
         /// </summary>
@@ -65,6 +72,7 @@ namespace ZST
             info[1] = node.SelectSingleNode("Time").InnerText;
             info[2] = node.SelectSingleNode("Source").InnerText;
             info[3] = node.SelectSingleNode("LogMessage").InnerText;
+            type = (logType)Convert.ToInt32(node.SelectSingleNode("Type").InnerText);
         }
 
         /// <summary>
@@ -73,7 +81,12 @@ namespace ZST
         /// <param name="msg">tekst wiadomości z jaką chcemy utworzyć zapis</param>
         public Log(string[] msg)
         {
-            info = msg;
+            info[0] = msg[0];
+            info[1] = msg[1];
+            info[2] = msg[2];
+            info[3] = msg[3];
+            type = (logType)Convert.ToInt32(msg[4]);
+
         }
 
         /// <summary>
@@ -102,6 +115,9 @@ namespace ZST
             writer.WriteEndElement();
             writer.WriteStartElement("LogMessage");
             writer.WriteString(this.info[3]);
+            writer.WriteEndElement();
+            writer.WriteStartElement("Type");
+            writer.WriteString(Convert.ToString((int)this.type));
             writer.WriteEndElement();
             writer.WriteEndElement();
         }

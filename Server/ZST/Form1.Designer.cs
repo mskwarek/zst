@@ -98,6 +98,7 @@ namespace ZST
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             this.objectListView1.SelectedIndexChanged += new System.EventHandler(this.objectListView1_SelectedIndexChanged);
+            this.objectListView1.FormatRow += new EventHandler<FormatRowEventArgs>(this.olv1_FormatRow);
             // 
             // dt
             // 
@@ -151,9 +152,6 @@ namespace ZST
             this.ResumeLayout(false);
 
         }
-
-
-
 
 
         #endregion

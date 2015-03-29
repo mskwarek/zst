@@ -1,81 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Table>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:37</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:45</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>0</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:38</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:48</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>2</LogMessage>
+    <Type>0</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:38</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:49</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>3</LogMessage>
+    <Type>0</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:38</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:50</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>4</LogMessage>
+    <Type>0</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:38</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:52</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>1</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:38</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:53</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>2</LogMessage>
+    <Type>1</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:38</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:55</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>3</LogMessage>
+    <Type>1</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:39</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:12:56</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>4</LogMessage>
+    <Type>1</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:39</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:13:01</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>2</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:39</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:13:02</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>2</LogMessage>
+    <Type>2</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:39</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:13:04</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>3</LogMessage>
+    <Type>2</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:39</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:13:05</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>4</LogMessage>
+    <Type>2</Type>
   </data>
   <data>
-    <Date>15-3-18</Date>
-    <Time>22:02:40</Time>
-    <Source>192.168.29.1</Source>
-    <LogMessage>adam jest smieciem</LogMessage>
+    <Date>15-3-30</Date>
+    <Time>00:13:09</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>3</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:10</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>2</LogMessage>
+    <Type>3</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:11</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>3</LogMessage>
+    <Type>3</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:12</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>4</LogMessage>
+    <Type>3</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:17</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>4</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:19</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>2</LogMessage>
+    <Type>4</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:21</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>3</LogMessage>
+    <Type>4</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:23</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>4</LogMessage>
+    <Type>4</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:31</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>5</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:33</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>2</LogMessage>
+    <Type>5</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:35</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>3</LogMessage>
+    <Type>5</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:37</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>4</LogMessage>
+    <Type>5</Type>
+  </data>
+  <data>
+    <Date>15-3-30</Date>
+    <Time>00:13:41</Time>
+    <Source>192.168.37.1</Source>
+    <LogMessage>1</LogMessage>
+    <Type>4</Type>
   </data>
 </Table>

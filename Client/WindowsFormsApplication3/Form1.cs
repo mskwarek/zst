@@ -20,6 +20,9 @@ namespace WindowsFormsApplication3
         /// </summary>
         private Client client;
 
+        private bool ComboBoxFlag = false;
+        private bool MsgBoxFlag = false;
+
         /// <summary>
         /// Konstruktor klasy form
         /// </summary>
@@ -37,7 +40,16 @@ namespace WindowsFormsApplication3
         /// <param name="e">wysyłane zdarzenie</param>
         private void logMsgTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.sendMsgButton.Enabled = true;
+            if (ComboBoxFlag)
+            {
+                this.sendMsgButton.Enabled = true;
+            }
+
+            else
+            {
+                MsgBoxFlag = true;
+            }
+
         }
         
         /// <summary>
@@ -57,7 +69,19 @@ namespace WindowsFormsApplication3
         /// <param name="e">wysyłane zdarzenie</param>
         private void sendMsgButton_Click(object sender, EventArgs e)
         {
-            this.client.sendMessage(this.logMsgTextBox.Text);
+            this.client.sendMessage(this.logMsgTextBox.Text+ "&" + this.comboBox1.SelectedIndex);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MsgBoxFlag)
+            {
+                this.sendMsgButton.Enabled = true;
+            }
+            else
+            {
+                ComboBoxFlag = true;
+            }
         }
     }
 }

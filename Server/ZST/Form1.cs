@@ -106,6 +106,35 @@ namespace ZST
             }
         }
 
+        private void olv1_FormatRow(object sender, FormatRowEventArgs e)
+        {
+            Log log = (Log)e.Model; 
+            switch(log.Type){
+                case Log.logType.Critical:
+                    e.Item.BackColor = Color.DarkRed;
+                    break;
+                case Log.logType.Indeterminate:
+                    e.Item.BackColor = Color.DarkCyan;
+                    break;
+                case Log.logType.Major:
+                    e.Item.BackColor = Color.Azure;
+                    break;
+                case Log.logType.Minor:
+                    e.Item.BackColor = Color.Aqua;
+                    break;
+                case Log.logType.Warning:
+                    e.Item.BackColor = Color.Yellow;
+                    break;
+                case Log.logType.Cleared:
+                    e.Item.BackColor = Color.Ivory;
+                    break;
+                default:
+                    break;
+
+
+            }
+        }
+
         private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
