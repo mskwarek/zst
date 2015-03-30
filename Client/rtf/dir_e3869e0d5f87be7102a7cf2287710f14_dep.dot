@@ -1,9 +1,0 @@
-digraph "WindowsFormsApplication3/obj/Debug" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_a3513742d7318ad19be6c86f421f80cb {
-    graph [ bgcolor="#ddddee", pencolor="black", label="obj" fontname="Helvetica", fontsize="10", URL="dir_a3513742d7318ad19be6c86f421f80cb.html"]
-  dir_e3869e0d5f87be7102a7cf2287710f14 [shape=box, label="Debug", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e3869e0d5f87be7102a7cf2287710f14.html"];
-  }
-}

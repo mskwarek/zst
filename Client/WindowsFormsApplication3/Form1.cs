@@ -20,7 +20,14 @@ namespace WindowsFormsApplication3
         /// </summary>
         private Client client;
 
+        /// <summary>
+        /// flaga reprezentująca moment wyboru jednego z rodzajów zdarzenia
+        /// </summary>
         private bool ComboBoxFlag = false;
+
+        /// <summary>
+        /// flaga reprezentująca fakt wpisania tekstu wiadomości
+        /// </summary>
         private bool MsgBoxFlag = false;
 
         /// <summary>
@@ -72,6 +79,11 @@ namespace WindowsFormsApplication3
             this.client.sendMessage(this.logMsgTextBox.Text+ "&" + this.comboBox1.SelectedIndex);
         }
 
+        /// <summary>
+        /// Metoda wykonująca się na skutek wyboru indeksu z comboBoxa
+        /// </summary>
+        /// <param name="sender">obiekt wysyłajacy zdarzenie</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (MsgBoxFlag)
