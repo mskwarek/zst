@@ -58,7 +58,9 @@ namespace ZST
         private void openFileDialog_FileOk(object sender, CancelEventArgs e)
         {
             logAgent.loadLogs(openFileDialog.FileName);
+
         }
+
 
         /// <summary>
         /// metoda uruchamiana po wciśnięciu 2. przycisku (zapis logów do pliku)
@@ -133,12 +135,9 @@ namespace ZST
 
 
             }
+            
         }
 
-        private void objectListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         /// <summary>
         /// metoda wywoływana przy próbie usunięcia logów z listy
@@ -155,6 +154,8 @@ namespace ZST
             this.logAgent.removeLogs(selected);
             this.objectListView1.RemoveObjects(this.objectListView1.SelectedObjects);
             
-        }  
+        }
+
+
     }
 }

@@ -20,7 +20,14 @@ namespace ZST
         string[] info = new string[4];
         public enum logType { Warning, Minor, Major, Critical, Cleared, Indeterminate };
         logType type;
+        private static int lp_last = 1;
+        private int lp;
 
+        public int LP
+        {
+            get { return lp; }
+            set { lp = value; }
+        }
         public logType Type
         {
             get {return type;}
@@ -73,6 +80,9 @@ namespace ZST
             info[2] = node.SelectSingleNode("Source").InnerText;
             info[3] = node.SelectSingleNode("LogMessage").InnerText;
             type = (logType)Convert.ToInt32(node.SelectSingleNode("Type").InnerText);
+
+            lp = lp_last;
+            lp_last++;
         }
 
         /// <summary>
@@ -87,6 +97,8 @@ namespace ZST
             info[3] = msg[3];
             type = (logType)Convert.ToInt32(msg[4]);
 
+            lp = lp_last;
+            lp_last++;
         }
 
         /// <summary>

@@ -38,6 +38,7 @@ namespace ZST
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.lp = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.dt = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tm = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.src = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -50,7 +51,7 @@ namespace ZST
             // 
             this.button1.Location = new System.Drawing.Point(12, 390);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 36);
+            this.button1.Size = new System.Drawing.Size(101, 36);
             this.button1.TabIndex = 2;
             this.button1.Text = "Read Logs";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,9 +65,9 @@ namespace ZST
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(171, 390);
+            this.button2.Location = new System.Drawing.Point(119, 390);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 36);
+            this.button2.Size = new System.Drawing.Size(101, 36);
             this.button2.TabIndex = 3;
             this.button2.Text = "Write Logs";
             this.button2.UseVisualStyleBackColor = true;
@@ -80,25 +81,37 @@ namespace ZST
             // 
             // objectListView1
             // 
+            this.objectListView1.AllColumns.Add(this.lp);
             this.objectListView1.AllColumns.Add(this.dt);
             this.objectListView1.AllColumns.Add(this.tm);
             this.objectListView1.AllColumns.Add(this.src);
             this.objectListView1.AllColumns.Add(this.msg);
             this.objectListView1.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.SingleClick;
             this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lp,
             this.dt,
             this.tm,
             this.src,
             this.msg});
+            this.objectListView1.FullRowSelect = true;
+            this.objectListView1.GridLines = true;
             this.objectListView1.Location = new System.Drawing.Point(12, 12);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(726, 372);
+            this.objectListView1.Size = new System.Drawing.Size(534, 372);
             this.objectListView1.TabIndex = 5;
             this.objectListView1.UseCellFormatEvents = true;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.PrimarySortColumn = dt;
             this.objectListView1.View = System.Windows.Forms.View.Details;
-            this.objectListView1.SelectedIndexChanged += new System.EventHandler(this.objectListView1_SelectedIndexChanged);
-            this.objectListView1.FormatRow += new EventHandler<FormatRowEventArgs>(this.olv1_FormatRow);
+            this.objectListView1.FormatRow += new System.EventHandler<BrightIdeasSoftware.FormatRowEventArgs>(this.olv1_FormatRow);
+            // 
+            // lp
+            // 
+            this.lp.AspectName = "LP";
+            this.lp.Groupable = false;
+            this.lp.IsEditable = false;
+            this.lp.Text = "LP";
+            this.lp.Width = 30;
             // 
             // dt
             // 
@@ -128,7 +141,7 @@ namespace ZST
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(585, 390);
+            this.button3.Location = new System.Drawing.Point(393, 390);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 36);
             this.button3.TabIndex = 6;
@@ -140,7 +153,7 @@ namespace ZST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 451);
+            this.ClientSize = new System.Drawing.Size(558, 451);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.button2);
@@ -166,6 +179,7 @@ namespace ZST
         private BrightIdeasSoftware.OLVColumn src;
         private BrightIdeasSoftware.OLVColumn msg;
         private System.Windows.Forms.Button button3;
+        private OLVColumn lp;
        
   
     }
