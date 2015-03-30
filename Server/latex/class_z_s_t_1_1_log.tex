@@ -5,6 +5,19 @@
 Klasa reprezentująca pojedyńczy log (zapis w dzienniku zdarzen)  
 
 
+\subsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fe}{log\+Type} \{ \\*
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea0eaadb4fcb48a0a0ed7bc9868be9fbaa}{log\+Type.\+Warning}, 
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea6fed0c378a4b4e8c1e7dc5c16dabb388}{log\+Type.\+Minor}, 
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea3b329734e45b57e60f3df64c2cf412a9}{log\+Type.\+Major}, 
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea278d01e5af56273bae1bb99a98b370cd}{log\+Type.\+Critical}, 
+\\*
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85feaa3b087a75730395ff9ff9d3dd307295e}{log\+Type.\+Cleared}, 
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85feaa2d00c353d1f9a5f07852650030dbd53}{log\+Type.\+Indeterminate}
+ \}
+\begin{DoxyCompactList}\small\item\em Typ wyliczeniowy reprezentujący przykładowe typy zapisywanych zdarzeń \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +32,10 @@ void \hyperlink{class_z_s_t_1_1_log_a96caeb14ebf1c3b16ca33fe71e42e962}{create\+N
 \subsection*{Właściwości}
 \begin{DoxyCompactItemize}
 \item 
+int \hyperlink{class_z_s_t_1_1_log_a32b5d39256faebe185d88889f75f9e87}{L\+P}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pobieranie/ustawianie liczby porządkowej danego Loga \end{DoxyCompactList}\item 
+\hyperlink{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fe}{log\+Type} \hyperlink{class_z_s_t_1_1_log_acbdc6d736db18eb65a7d80b94d03be07}{Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ustawianie/pobieranie typu zdarzenia \end{DoxyCompactList}\item 
 string \hyperlink{class_z_s_t_1_1_log_a18e6ee60e833732b553f991aca086217}{Date}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Pobieranie i ustawianie daty \end{DoxyCompactList}\item 
 string \hyperlink{class_z_s_t_1_1_log_a80ca6c06e14d09edc94cbd0c0e21b8ee}{Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -34,8 +51,31 @@ Klasa reprezentująca pojedyńczy log (zapis w dzienniku zdarzen)
 
 
 
-Definicja w linii 15 pliku Log.\+cs.
+\subsection{Dokumentacja składowych wyliczanych}
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fe}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!log\+Type@{log\+Type}}
+\index{log\+Type@{log\+Type}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{log\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Z\+S\+T.\+Log.\+log\+Type}}\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fe}
 
+
+Typ wyliczeniowy reprezentujący przykładowe typy zapisywanych zdarzeń 
+
+\begin{Desc}
+\item[Wartości wyliczeń]\par
+\begin{description}
+\index{Warning@{Warning}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Warning@{Warning}}\item[{\em 
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea0eaadb4fcb48a0a0ed7bc9868be9fbaa}{}Warning\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea0eaadb4fcb48a0a0ed7bc9868be9fbaa}
+}]\index{Minor@{Minor}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Minor@{Minor}}\item[{\em 
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea6fed0c378a4b4e8c1e7dc5c16dabb388}{}Minor\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea6fed0c378a4b4e8c1e7dc5c16dabb388}
+}]\index{Major@{Major}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Major@{Major}}\item[{\em 
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea3b329734e45b57e60f3df64c2cf412a9}{}Major\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea3b329734e45b57e60f3df64c2cf412a9}
+}]\index{Critical@{Critical}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Critical@{Critical}}\item[{\em 
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea278d01e5af56273bae1bb99a98b370cd}{}Critical\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85fea278d01e5af56273bae1bb99a98b370cd}
+}]\index{Cleared@{Cleared}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Cleared@{Cleared}}\item[{\em 
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85feaa3b087a75730395ff9ff9d3dd307295e}{}Cleared\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85feaa3b087a75730395ff9ff9d3dd307295e}
+}]\index{Indeterminate@{Indeterminate}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Indeterminate@{Indeterminate}}\item[{\em 
+\hypertarget{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85feaa2d00c353d1f9a5f07852650030dbd53}{}Indeterminate\label{class_z_s_t_1_1_log_aefc9edf31eecb73ccb4c0ef6077b85feaa2d00c353d1f9a5f07852650030dbd53}
+}]\end{description}
+\end{Desc}
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
@@ -55,10 +95,6 @@ Konstruktor klasy \hyperlink{class_z_s_t_1_1_log}{Log}
 {\em node} & węzeł z pliku xml zawierający informacje o Logu\\
 \hline
 \end{DoxyParams}
-
-
-Definicja w linii 62 pliku Log.\+cs.
-
 \hypertarget{class_z_s_t_1_1_log_aea522d0f2791697d32fd1d30df121391}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Log@{Log}}
 \index{Log@{Log}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
 \subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Z\+S\+T.\+Log.\+Log (
@@ -75,10 +111,6 @@ Konstruktor klasy \hyperlink{class_z_s_t_1_1_log}{Log}
 {\em msg} & tekst wiadomości z jaką chcemy utworzyć zapis\\
 \hline
 \end{DoxyParams}
-
-
-Definicja w linii 74 pliku Log.\+cs.
-
 
 
 \subsection{Dokumentacja funkcji składowych}
@@ -98,16 +130,6 @@ Zapisanie pojedyńczego Logu jako węzła X\+M\+Lowego
 {\em writer} & X\+M\+L gdzie należy zapisać \hyperlink{class_z_s_t_1_1_log}{Log}\\
 \hline
 \end{DoxyParams}
-
-
-Definicja w linii 91 pliku Log.\+cs.
-
-
-
-Oto graf wywoływań tej funkcji\+:
-% FIG 0
-
-
 \hypertarget{class_z_s_t_1_1_log_a1c256684db52090c18ade4f4a8058157}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!get\+Log@{get\+Log}}
 \index{get\+Log@{get\+Log}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
 \subsubsection[{get\+Log}]{\setlength{\rightskip}{0pt plus 5cm}string \mbox{[}$\,$\mbox{]} Z\+S\+T.\+Log.\+get\+Log (
@@ -124,16 +146,6 @@ informacje o \hyperlink{class_z_s_t_1_1_log}{Log}
 \end{DoxyReturn}
 
 
-Definicja w linii 83 pliku Log.\+cs.
-
-
-
-Oto graf wywoływań tej funkcji\+:
-% FIG 1
-
-
-
-
 \subsection{Dokumentacja właściwości}
 \hypertarget{class_z_s_t_1_1_log_a18e6ee60e833732b553f991aca086217}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Date@{Date}}
 \index{Date@{Date}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
@@ -142,9 +154,12 @@ Oto graf wywoływań tej funkcji\+:
 
 Pobieranie i ustawianie daty 
 
+\hypertarget{class_z_s_t_1_1_log_a32b5d39256faebe185d88889f75f9e87}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!L\+P@{L\+P}}
+\index{L\+P@{L\+P}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{L\+P}]{\setlength{\rightskip}{0pt plus 5cm}int Z\+S\+T.\+Log.\+L\+P\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_a32b5d39256faebe185d88889f75f9e87}
 
 
-Definicja w linii 26 pliku Log.\+cs.
+Pobieranie/ustawianie liczby porządkowej danego Loga 
 
 \hypertarget{class_z_s_t_1_1_log_a66573e9f4fe9a03aa42c2106b23c7b69}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Msg@{Msg}}
 \index{Msg@{Msg}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
@@ -153,20 +168,12 @@ Definicja w linii 26 pliku Log.\+cs.
 
 pobieranie i ustawianie tekstu wiadomości 
 
-
-
-Definicja w linii 53 pliku Log.\+cs.
-
 \hypertarget{class_z_s_t_1_1_log_a341d360d9362ea78c23dcfdde1ad3075}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Source@{Source}}
 \index{Source@{Source}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
 \subsubsection[{Source}]{\setlength{\rightskip}{0pt plus 5cm}string Z\+S\+T.\+Log.\+Source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_a341d360d9362ea78c23dcfdde1ad3075}
 
 
 pobieranie i ustawianie źródła od którego pochodzi zapis w dzienniku 
-
-
-
-Definicja w linii 44 pliku Log.\+cs.
 
 \hypertarget{class_z_s_t_1_1_log_a80ca6c06e14d09edc94cbd0c0e21b8ee}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Time@{Time}}
 \index{Time@{Time}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
@@ -175,9 +182,12 @@ Definicja w linii 44 pliku Log.\+cs.
 
 pobieranie i ustawianie czasu 
 
+\hypertarget{class_z_s_t_1_1_log_acbdc6d736db18eb65a7d80b94d03be07}{}\index{Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}!Type@{Type}}
+\index{Type@{Type}!Z\+S\+T\+::\+Log@{Z\+S\+T\+::\+Log}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log\+Type} Z\+S\+T.\+Log.\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_z_s_t_1_1_log_acbdc6d736db18eb65a7d80b94d03be07}
 
 
-Definicja w linii 35 pliku Log.\+cs.
+Ustawianie/pobieranie typu zdarzenia 
 
 
 

@@ -108,6 +108,11 @@ namespace ZST
             }
         }
 
+        /// <summary>
+        /// Formatowanie wiersza przechowującego informacje o logu
+        /// </summary>
+        /// <param name="sender">Obiekt wysyłający zdarzenie konieczności wykonania formatowania</param>
+        /// <param name="e">wysyłane zdarzenie</param>
         private void olv1_FormatRow(object sender, FormatRowEventArgs e)
         {
             Log log = (Log)e.Model; 

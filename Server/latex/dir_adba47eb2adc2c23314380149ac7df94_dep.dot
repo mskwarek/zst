@@ -1,9 +1,0 @@
-digraph "ZST/Properties" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_3c040c23d1ecb4e2756aecaf5bea0845 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="ZST" fontname="Helvetica", fontsize="10", URL="dir_3c040c23d1ecb4e2756aecaf5bea0845.html"]
-  dir_adba47eb2adc2c23314380149ac7df94 [shape=box, label="Properties", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_adba47eb2adc2c23314380149ac7df94.html"];
-  }
-}

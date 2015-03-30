@@ -18,16 +18,39 @@ namespace ZST
         /// informacje przechowywane w 4 rozmiarowej tablicy stringów
         /// </summary>
         string[] info = new string[4];
+
+        /// <summary>
+        /// Typ wyliczeniowy reprezentujący przykładowe typy zapisywanych zdarzeń
+        /// </summary>
         public enum logType { Warning, Minor, Major, Critical, Cleared, Indeterminate };
+
+        /// <summary>
+        /// zmienna uściślająca jakiego typu jest dany Log
+        /// </summary>
         logType type;
+
+        /// <summary>
+        /// Licznik utworzonych (wszystkich) instancji klasy Log
+        /// </summary>
         private static int lp_last = 1;
+
+        /// <summary>
+        /// Numer konkretnej instancji klasy log
+        /// </summary>
         private int lp;
 
+        /// <summary>
+        /// Pobieranie/ustawianie liczby porządkowej danego Loga
+        /// </summary>
         public int LP
         {
             get { return lp; }
             set { lp = value; }
         }
+
+        /// <summary>
+        /// Ustawianie/pobieranie typu zdarzenia
+        /// </summary>
         public logType Type
         {
             get {return type;}

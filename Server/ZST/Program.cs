@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace ZST
 {
+    /// <summary>
+    /// Główna klasa programu
+    /// </summary>
     static class Program
     {
         /// <summary>
